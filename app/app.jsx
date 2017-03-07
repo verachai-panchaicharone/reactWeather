@@ -1,19 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-var objOne = {
-  name: 'Bong',
-  location: 'Bangkok'
-};
-
-var objTwo = {
-  age: 25,
-  ...objOne
-};
-
-console.log(objTwo);
+var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+var Main = require('Main');
 
 ReactDOM.render(
-    <h1>boilerplate !</h1>,
+    <Router history={hashHistory}>
+      <Route path="/" component={Main}>
+
+      </Route>
+    </Router>,
     document.getElementById('app')
   );
